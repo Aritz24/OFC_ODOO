@@ -3,7 +3,7 @@
 
 from odoo import models, fields, api
 
-class Comment(models.Model):
+class comment(models.Model):
     _name = 'ofc_odoo.comment'
 
     name = fields.Char()
