@@ -13,7 +13,7 @@ class Comment(models.Model):
     data_modify = fields.Datatime()
     data_publication = field.Datatime()
     event = fields.many2one('ofc_odoo.event',string="Event",required=True)
-    client = fields.many2one('res.user',string="Client",required=True)
+    client = fields.many2one('res.User',string="Client",required=True)
     
         
 #     value2 = fields.Float(compute="_value_pc", store=True)
