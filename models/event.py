@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields
 
 class Event(models.Model):
      _name = 'ofc_odoo.event'
-
      name = fields.Char(Required = True)
-     activity = field.Char(digits = (5,2) ,help = "€" )
-     capacity = field.Integer(required = True)
-     date = field.Datetime(required = True)
-     place = field.Char(required = True)
-     price = field.Float()
-     admin = field.Many2one('res.users',required=True)
-     coments = field.One2many('ofc_odoo.coment','event',required=True)
-     clients = field.Many2many('res.users')
-     sponsors = field.Many2many('ofc_odoo.sponsor')
+     activity = fields.Char(digits = (5,2) ,help = "€" )
+     capacity = fields.Integer(required = True)
+     date = fields.Datetime(required = True)
+     place = fields.Char(required = True)
+     price = fields.Float()
+     admin = fields.Many2one('res.users',required=True, ofc_admin=True)
+     coments = fields.One2many('ofc_odoo.comment','event',required=True)
+     clients = fields.Many2many('res.users', ofc_admin=False)
+     sponsors = fields.Many2many('ofc_odoo.sponsor')

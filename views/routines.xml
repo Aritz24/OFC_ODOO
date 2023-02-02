@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+ <odoo>
+  <data>
+    <!-- actions opening views on models -->
+    
+     <record model="ir.actions.act_window" 
+             id="ofc_odoo.action_window_routine">
+      <field name="name">OFC activities</field>
+      <field name="res_model">ofc_odoo.routine</field>
+      <field name="view_mode">tree,form</field>
+      </record>
+      
+      <!-- actions -->
+      <menuitem name= "Routine Mangement"   
+      id="ofc_odoo.action_routine"
+      parent="ofc_odoo.menu_1"
+      action="ofc_odoo.action_window_routine"/>
+      
+     
+       <!-- explicit list view definition -->
+      <record model="ir.ui.view" id="ofc_odoo.list">
+      <field name="name">ofc_odoo list</field>
+      <field name="model">ofc_odoo.routine</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="client"/>
+          <field name="private"/>
+          <field name="exercise"/>
+          <field name="time"/>
+          <field name="date_start"/>
+          <field name="date_end"/>
+        </tree>
+      </field>
+    </record>
+    
+     <!-- formulario -->
+      <record model="ir.ui.view" id="ofc_odoo.form">
+      <field name="name">ofc_odoo form</field>
+      <field name="model">ofc_odoo.routine</field>
+      <field name="arch" type="xml">
+          <form string="Routine form">
+              <sheet>
+                  <group>
+                      <field name="name"/>
+                      <field name="client"/>
+                      <field name="private"/>
+                      <field name="exercise"/>
+                      <field name="time"/>
+                      <field name="date_start"/>
+                      <field name="date_end"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+      </record>
+    
+    <!-- De busqueda -->
+      <record model="ir.ui.view" id="ofc_odoo.search">
+      <field name="name">ofc_odoo serach</field>
+      <field name="model">ofc_odoo.routine</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="exercise"/>
+          <field name="client"/>
+           <field name="time"/>
+        </search>
+      </field>
+    </record>
+    
+  </data>
+</odoo>

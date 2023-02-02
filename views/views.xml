@@ -1,7 +1,17 @@
 <odoo>
   <data>
+      
+       <!-- Top menu item -->
+       
+      <menuitem name="OFC" id="ofc_odoo.menu_root"/>
+      
+      <!-- menu categories -->
+      <menuitem name="OFC Management" 
+                id="ofc_odoo.menu_1" 
+                parent="ofc_odoo.menu_root"/>
+       
     <!-- explicit list view definition -->
-    <!--
+    <!--                                        
     <record model="ir.ui.view" id="ofc_odoo.list">
       <field name="name">ofc_odoo list</field>
       <field name="model">ofc_odoo.ofc_odoo</field>
@@ -23,21 +33,7 @@
       <field name="view_mode">tree,form</field>
     </record>
     -->
-
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="ofc_odoo.action_server">
-      <field name="name">ofc_odoo server</field>
-      <field name="model_id" ref="model_ofc_odoo_ofc_odoo"/>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
+    
 
     <!-- Top menu item -->
     <!--
