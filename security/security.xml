@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <record id="ofc_manager" model="res.groups">
+            <field name="name">comment / manager</field>
+        </record>
+    </data>
+</odoo>    

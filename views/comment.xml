@@ -19,8 +19,8 @@
                             <group colspan="2" col="2">
                                 <separator string="Comment Create" colspan="2"/>
                                 <field name="name"/>
-                                <field name="comclient"/>
-                                <field name="event"/>
+                                <field name="comclient">actioon</field>
+                                <field name="event">ofc_odoo.event</field>
                                 <field name="message"/>
                                 <field name="valoration"/>
                                 <field name="privacity"/>
