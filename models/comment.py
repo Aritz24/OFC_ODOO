@@ -14,7 +14,7 @@ class Comment(models.Model):
     privacity = fields.Boolean()
     date_publication = fields.Date(required=True)
     event = fields.Many2one('ofc_odoo.event', string="Events", required=True)
-    comclient = fields.Many2one('res.users', required=True, ofc_admin=False)
+    comclient = fields.Many2one('res.users', default=lambda self: self.env.user, required=True, ofc_admin=False, readonly=True)
     
     @api.onchange('date_publication')
     def _onchange_date_publication(self):
