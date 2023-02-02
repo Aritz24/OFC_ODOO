@@ -1,5 +1,5 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-ofc_comment_manager_id,ofc comment manager id,model_ofc_odoo_comment,ofc_manager,1,1,1,1
+ofc_comment_manager_id,ofc comment. manager id,model_ofc_odoo_comment,ofc_manager,1,1,1,1
 ofc_event_manager_id,ofc event manager id,model_ofc_odoo_event,ofc_manager,1,1,1,1
 OfC_comment_manager_all,OFC comment manager all,model_ofc_odoo_comment,,1,0,0,0
 ofc_event_manager_all,ofc event manager all,model_ofc_odoo_event,,1,0,0,0
