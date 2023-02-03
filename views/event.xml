@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" 
+                id="ofc_odoo.action_Event">
+            <field name="name">OFC Event</field>
+            <field name="res_model">ofc_odoo.event</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    
+        <menuitem name="Event Manager" 
+                  id="ofc_odoo.menu_1_event" 
+                  parent="ofc_odoo.ofc_odoo"
+                  action="ofc_odoo.action_Event"/>   
+        
+        <record model="ir.ui.view" id="event_tree_view">
+            <field name="name">event.tree</field>
+            <field name="model">ofc_odoo.event</field>
+            <field name="arch" type="xml">
+                <tree string="Event Tree">
+                    <field name="name"/>
+                    <field name="activity"/>
+                    <field name="capacity"/>
+                    <field name="date"/>
+                    <field name="place"/>
+                    <field name="price"/>
+                    <field name="clients"/>
+                </tree>
+            </field>
+        </record>     
+        
+        <record model="ir.ui.view" id="event_form_view">
+            <field name="name">event.form</field>
+            <field name="model">ofc_odoo.event</field>
+            <field name="arch" type="xml">
+                <form string="event Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="activity"/>
+                            <field name="capacity"/>
+                            <field name="date"/>
+                            <field name="place"/>
+                            <field name="price"/>
+                            <field name="clients"/>
+                            <field name="admin"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+       
+        <record model="ir.ui.view" id="event_search_view">
+            <field name="name">event.search</field>
+            <field name="model">ofc_odoo.event</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="activity"/>
+                    <field name="capacity"/>
+                    <field name="date"/>
+                    <field name="place"/>
+                    <field name="price"/>
+                    <field name="coments"/>
+                    <field name="sponsors"/>
+                    <field name="clients"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>
+

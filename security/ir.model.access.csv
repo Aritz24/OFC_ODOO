@@ -1,2 +1,17 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ofc_odoo_ofc_odoo,ofc_odoo.ofc_odoo,model_ofc_odoo_ofc_odoo,,1,0,0,0
+
+routine_manager,routine manager,model_ofc_odoo_routine,routine_group_manager,1,1,1,1
+routine_manager_all,routine manager all,model_ofc_odoo_routine,,1,0,0,0
+
+ofc_event_manager,event group,model_ofc_odoo_event,ofc_manager,1,1,1,1
+eventClient_group,clien group,model_ofc_odoo_event,,1,1,0,0
+
+
+ofc_comment_manager_id,ofc comment. manager id,model_ofc_odoo_comment,comment_group_manager,1,1,1,1
+ofc_event_manager_id,ofc event manager id,model_ofc_odoo_event,comment_group_manager,1,1,1,1
+OfC_comment_manager_all,OFC comment manager all,model_ofc_odoo_comment,,1,0,0,0
+ofc_event_manager_all,ofc event manager all,model_ofc_odoo_event,,1,0,0,0
+
+sponsor_manager,Sponsor Manager,model_ofc_odoo_sponsor,group_manager,1,1,1,1
+
+

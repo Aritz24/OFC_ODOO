@@ -1,0 +1,19 @@
+<odoo>
+    <data><!-- Add instructor field to existing view -->
+        <record model="ir.ui.view" id="ofc_routine">
+            <field name="name">res.users</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Routines">
+                        <group>
+                            <field name="ofc_routine"></field>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>
+    

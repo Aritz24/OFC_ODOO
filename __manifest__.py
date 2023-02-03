@@ -7,7 +7,7 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        Long description of module's purpose
+        This module manages events, comments, sponsors and routines that the user can have.
     """,
 
     'author': "My Company",
@@ -24,9 +24,31 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+
+        'security/security.xml',
+        
+        'security/commentSecurity.xml',
+        
+        'security/routineSecurity.xml',
+
+        'security/EventSecurity.xml',
+
+        'security/ir.model.access.csv',
+        
         'views/views.xml',
+        
+        'views/sponsor.xml',
+        'views/sponsorView.xml',
+
+        'views/routines.xml',
+        
+        'views/comment.xml',
+
+        'views/event.xml',
+        'views/eventView.xml',
+        
         'views/templates.xml',
+        'views/partner.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
