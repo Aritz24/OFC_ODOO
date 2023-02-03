@@ -1,3 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
 routine_manager,routine manager,model_ofc_odoo_routine,routine_group_manager,1,1,1,1
 routine_manager_all,routine manager all,model_ofc_odoo_routine,,1,0,0,0
+
+ofc_event_manager,event group,model_ofc_odoo_event,ofc_manager,1,1,1,1
+eventClient_group,clien group,model_ofc_odoo_event,,1,1,0,0
+
+

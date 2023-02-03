@@ -62,4 +62,3 @@ class Routine(models.Model):
             
 
 
-

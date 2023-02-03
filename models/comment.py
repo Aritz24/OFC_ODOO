@@ -12,6 +12,7 @@ class Comment(models.Model):
     privacity = fields.Boolean(required=True)
     data_modify = fields.Datetime()
     data_publication = fields.Datetime(required=True)
-    event = fields.Many2one('ofc_odoo.event',string="Events",required=True)
-    comclient = fields.Many2one('res.User',string="Client",required=True, ofc_admin=False)
+    event = fields.Many2one('ofc_odoo.event', string="Events",required=True)
+    comclient = fields.Many2one('res.users', string="Client",required=True, ofc_admin=False)
+    
     

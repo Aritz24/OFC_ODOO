@@ -7,7 +7,7 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        sadadasdadas
+        This module 
     """,
 
     'author': "My Company",
@@ -24,10 +24,19 @@
 
     # always loaded
     'data': [
+
         'security/routineSecurity.xml',
+
+        'security/security.xml',
+
         'security/ir.model.access.csv',
         'views/views.xml',
+
         'views/routines.xml',
+
+        'views/event.xml',
+        'views/eventView.xml',
+
         'views/templates.xml',
         'views/partner.xml',
     ],

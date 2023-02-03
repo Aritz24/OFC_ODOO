@@ -18,7 +18,7 @@ and open the template in the editor.
       <!-- actions -->
       <menuitem name= "Routine Mangement"   
       id="ofc_odoo.action_routine"
-      parent="ofc_odoo.menu_1"
+      parent="ofc_odoo"
       action="ofc_odoo.action_window_routine"/>
       
      
