@@ -1,0 +1,77 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="ofc_odoo.action_comment">
+            <field name="name">OFC comments</field>
+            <field name="res_model">ofc_odoo.comment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="OFC comments" 
+                  id="ofc_odoo.menu_1_list_comments" 
+                  parent="ofc_odoo"
+                  action="ofc_odoo.action_comment"/>
+        <record model="ir.ui.view" id="comment_form_view">
+            <field name="name">comment.form</field>
+            <field name="model">ofc_odoo.comment</field>
+            <field name="arch" type="xml">
+                <form string="Comment">
+                    <sheet>
+                        <group colspan="4">
+                            <group colspan="2" col="2">
+                                <separator string="Comment Create" colspan="2"/>
+                                <field name="name"/>
+                                <field name="comclient"/>
+                                <field name="event"/>
+                                <field name="message"/>
+                                <field name="valoration"/>
+                                <field name="privacity"/>
+                                <field name="date_publication"/>
+                            </group> 
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="course_tree_view">
+            <field name="name">comment.tree</field>
+            <field name="model">ofc_odoo.comment</field>
+            <field name="arch" type="xml">
+                <tree string="Comment Tree">
+                    <field name="name"/>
+                    <field name="comclient"/>
+                    <field name="event"/>
+                    <field name="message"/>
+                    <field name="valoration"/>
+                    <field name="date_publication"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="course_search_view">
+            <field name="name">comment.search   </field>
+            <field name="model">ofc_odoo.comment</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="comclient"/>
+                    <field name="event"/>
+                    <field name="message"/>
+                    <field name="valoration"/>
+                    <field name="date_publication"/>
+                </search>
+            </field>
+        </record> 
+        <record model="ir.ui.view" id="ofc_comment" >
+            <field name="model">res.users</field>
+            <field name="name">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">           
+                <notebook position="inside">
+                    <page string="Comment">
+                        <group>
+                            <field name="ofc_comment"/>
+                        </group>
+                    </page>
+                </notebook>            
+            </field>
+        </record>
+    </data>
+</odoo>

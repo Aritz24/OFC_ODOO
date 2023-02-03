@@ -7,3 +7,11 @@ ofc_event_manager,event group,model_ofc_odoo_event,ofc_manager,1,1,1,1
 eventClient_group,clien group,model_ofc_odoo_event,,1,1,0,0
 
 
+ofc_comment_manager_id,ofc comment. manager id,model_ofc_odoo_comment,comment_group_manager,1,1,1,1
+ofc_event_manager_id,ofc event manager id,model_ofc_odoo_event,comment_group_manager,1,1,1,1
+OfC_comment_manager_all,OFC comment manager all,model_ofc_odoo_comment,,1,0,0,0
+ofc_event_manager_all,ofc event manager all,model_ofc_odoo_event,,1,0,0,0
+
+sponsor_manager,Sponsor Manager,model_ofc_odoo_sponsor,group_manager,1,1,1,1
+
+

@@ -6,8 +6,7 @@
     <menuitem name="OFC Management" 
               id="ofc_odoo" 
               parent="ofc_odoo.menu_root"/>
- 
-    
+
   </data>
   
 </odoo>
